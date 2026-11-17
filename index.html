@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krístopher Kretli | Advogado - Atendimento em Todo o Brasil</title>
+    <meta name="description" content="Advocacia moderna e descomplicada. Especialista em Direito do Trabalho, Família, Previdenciário e Cível. Atendimento online em todo o Brasil.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans (Moderna e Jovem) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',    /* Slate 900 */
+                            card: '#1e293b',    /* Slate 800 */
+                            accent: '#f59e0b',  /* Amber 500 (Dourado Moderno) */
+                            accentHover: '#d97706',
+                            light: '#f8fafc'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Efeito de Glassmorphism */
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #f59e0b, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Botão flutuante do WhatsApp com pulsação */
+        .whatsapp-float {
+            animation: pulse-green 2s infinite;
+        }
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-brand-light font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-scale-balanced text-brand-accent text-2xl"></i>
+                    <span class="font-bold text-xl tracking-tight">Krístopher Kretli <span class="text-brand-accent font-light">| Advogado</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="hover:text-brand-accent transition-colors">Início</a>
+                    <a href="#areas" class="hover:text-brand-accent transition-colors">Áreas de Atuação</a>
+                    <a href="#sobre" class="hover:text-brand-accent transition-colors">Sobre</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5533999877866&text=Ol%C3%A1%2C+Dr.+Kr%C3%ADstopher.+Preciso+de+orienta%C3%A7%C3%A3o+jur%C3%ADdica&type=phone_number&app_absent=0&utm_source=ig" target="_blank" class="bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-bold py-2 px-6 rounded-full transition-all transform hover:scale-105">
+                        Falar no WhatsApp
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-accent focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass border-t border-gray-700">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#inicio" class="block px-3 py-2 rounded-md hover:bg-brand-card">Início</a>
+                <a href="#areas" class="block px-3 py-2 rounded-md hover:bg-brand-card">Áreas de Atuação</a>
+                <a href="#sobre" class="block px-3 py-2 rounded-md hover:bg-brand-card">Sobre</a>
+                <a href="https://api.whatsapp.com/send/?phone=5533999877866&text=Ol%C3%A1%2C+Dr.+Kr%C3%ADstopher.+Preciso+de+orienta%C3%A7%C3%A3o+jur%C3%ADdica&type=phone_number&app_absent=0&utm_source=ig" target="_blank" class="block px-3 py-2 mt-4 text-center bg-brand-accent text-brand-dark font-bold rounded-full">Falar no WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-accent rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div data-aos="fade-down" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-card border border-gray-700 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <span class="text-sm font-medium text-gray-300">Atendimento 100% Online em todo o 🇧🇷 Brasil</span>
+                </div>
+                <h1 data-aos="fade-up" data-aos-delay="100" class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Advocacia <span class="text-gradient">Moderna</span>, Ágil e <br class="hidden md:block"> Descomplicada.
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                    Protegendo seus direitos com estratégia, tecnologia e proximidade. Especialista em Direito do Trabalho, Família, Previdenciário e Cível.
+                </p>
+                <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://api.whatsapp.com/send/?phone=5533999877866&text=Ol%C3%A1%2C+Dr.+Kr%C3%ADstopher.+Preciso+de+orienta%C3%A7%C3%A3o+jur%C3%ADdica&type=phone_number&app_absent=0&utm_source=ig" target="_blank" class="bg-brand-accent hover:bg-brand-accentHover text-brand-dark font-bold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        Falar com o Advogado Agora
+                    </a>
+                    <a href="https://www.instagram.com/eukristopherkretli/" target="_blank" class="bg-transparent border-2 border-gray-600 hover:border-brand-accent hover:text-brand-accent text-white font-semibold py-4 px-8 rounded-full text-lg transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                        Acompanhe no Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="border-y border-gray-800 bg-brand-card/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div data-aos="fade-up" data-aos-delay="0">
+                    <div class="text-3xl font-bold text-brand-accent mb-1">100%</div>
+                    <div class="text-sm text-gray-400">Digital e Online</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl font-bold text-brand-accent mb-1">🇧🇷</div>
+                    <div class="text-sm text-gray-400">Atendimento Nacional</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl font-bold text-brand-accent mb-1">⚡</div>
+                    <div class="text-sm text-gray-400">Agilidade Processual</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-3xl font-bold text-brand-accent mb-1">🔒</div>
+                    <div class="text-sm text-gray-400">Sigilo e Segurança</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Áreas de Atuação -->
+    <section id="areas" class="py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-4">Como posso te <span class="text-gradient">ajudar?</span></h2>
+                <p data-aos="fade-up" data-aos-delay="100" class="text-gray-400 max-w-2xl mx-auto">Atuação estratégica e personalizada nas principais áreas do direito para proteger o que é mais importante para você.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div data-aos="fade-up" data-aos-delay="0" class="bg-brand-card p-8 rounded-2xl border border-gray-800 hover:border-brand-accent transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-brand-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-accent/20 transition-colors">
+                        <i class="fa-solid fa-briefcase text-2xl text-brand-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Direito do Trabalho</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Defesa dos seus direitos na relação de trabalho, rescisões, horas extras e reconhecimento de vínculos.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-brand-card p-8 rounded-2xl border border-gray-800 hover:border-brand-accent transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-brand-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-accent/20 transition-colors">
+                        <i class="fa-solid fa-people-roof text-2xl text-brand-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Direito de Família</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Divórcios, pensão alimentícia, guarda, regulamentação de visitas e inventários com sensibilidade e estratégia.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-brand-card p-8 rounded-2xl border border-gray-800 hover:border-brand-accent transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-brand-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-accent/20 transition-colors">
+                        <i class="fa-solid fa-hand-holding-heart text-2xl text-brand-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Direito Previdenciário</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Planejamento previdenciário, concessão de aposentadorias, auxílio-doença e revisões de benefícios junto ao INSS.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-brand-card p-8 rounded-2xl border border-gray-800 hover:border-brand-accent transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="w-14 h-14 bg-brand-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-accent/20 transition-colors">
+                        <i class="fa-solid fa-file-contract text-2xl text-brand-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Direito Cível</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Resolução de conflitos, contratos, indenizações, cobranças e defesa do consumidor de forma eficiente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre / Diferenciais -->
+    <section id="sobre" class="py-20 bg-brand-card/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <!-- Foto do Advogado -->
+                    <div class="relative rounded-2xl overflow-hidden border border-gray-700 shadow-2xl">
+                        <img src="1.jpg" alt="Krístopher Kretli - Advogado" class="w-full h-full object-cover aspect-[4/5]">
+                        
+                        <!-- Badge flutuante -->
+                        <div class="absolute bottom-6 left-6 right-6 glass p-4 rounded-xl">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-brand-accent text-brand-dark font-bold w-10 h-10 rounded-full flex items-center justify-center text-lg">K</div>
+                                <div>
+                                    <p class="font-bold text-white">Krístopher Kretli</p>
+                                    <p class="text-xs text-gray-300">Advogado | OAB 230.511/MG</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Uma nova era na <span class="text-gradient">Advocacia</span></h2>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        O mundo mudou, e a forma de fazer advocacia também. Meu escritório foi construído sobre os pilares da <strong>modernidade, transparência e resultado</strong>. 
+                    </p>
+                    <p class="text-gray-300 mb-8 leading-relaxed">
+                        Acredito que o acesso à justiça deve ser descomplicado. Por isso, ofereço um atendimento humanizado, mas com a eficiência da tecnologia, permitindo que eu atenda clientes em <strong>todo o território nacional</strong> sem que você precise sair de casa.
+                    </p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-accent mt-1"></i>
+                            <span class="text-gray-300">Atendimento direto e sem burocracia pelo WhatsApp.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-accent mt-1"></i>
+                            <span class="text-gray-300">Atualizações constantes sobre o andamento do seu processo.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-accent mt-1"></i>
+                            <span class="text-gray-300">Estratégias jurídicas personalizadas para o seu caso.</span>
+                        </li>
+                    </ul>
+
+                    <a href="https://www.instagram.com/eukristopherkretli/" target="_blank" class="inline-flex items-center gap-2 text-brand-accent font-semibold hover:text-white transition-colors">
+                        <i class="fa-brands fa-instagram"></i>
+                        Conheça meu trabalho no Instagram
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-accent opacity-5"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10" data-aos="zoom-in">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Não deixe seus direitos para depois.</h2>
+            <p class="text-xl text-gray-300 mb-10">Cada dia conta em um processo jurídico. Tire suas dúvidas agora mesmo com uma orientação especializada.</p>
+            <a href="https://api.whatsapp.com/send/?phone=5533999877866&text=Ol%C3%A1%2C+Dr.+Kr%C3%ADstopher.+Preciso+de+orienta%C3%A7%C3%A3o+jur%C3%ADdica&type=phone_number&app_absent=0&utm_source=ig" target="_blank" class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-10 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg shadow-green-500/30">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                Iniciar Atendimento pelo WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-card border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-scale-balanced text-brand-accent text-xl"></i>
+                        <span class="font-bold text-lg">Krístopher Kretli <span class="text-brand-accent font-light">| Advogado</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Advocacia moderna e estratégica para proteger seus direitos em todo o Brasil.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#inicio" class="hover:text-brand-accent transition-colors">Início</a></li>
+                        <li><a href="#areas" class="hover:text-brand-accent transition-colors">Áreas de Atuação</a></li>
+                        <li><a href="#sobre" class="hover:text-brand-accent transition-colors">Sobre</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-white mb-4">Contato</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-green-500 text-lg"></i>
+                            <a href="https://api.whatsapp.com/send/?phone=5533999877866&text=Ol%C3%A1%2C+Dr.+Kr%C3%ADstopher.+Preciso+de+orienta%C3%A7%C3%A3o+jur%C3%ADdica&type=phone_number&app_absent=0&utm_source=ig" target="_blank" class="hover:text-white transition-colors">(33) 99987-7866</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-instagram text-pink-500 text-lg"></i>
+                            <a href="https://www.instagram.com/eukristopherkretli/" target="_blank" class="hover:text-white transition-colors">@eukristopherkretli</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-globe text-brand-accent text-lg"></i>
+                            <span>Atendimento 100% Online 🇧🇷</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">
+                    &copy; 2024 Krístopher Kretli Advocacia. Todos os direitos reservados.
+                </p>
+                <p class="text-gray-600 text-xs mt-2">
+                    criado por <a href="https://diegofsnascimento.github.io/site/" target="_blank" class="hover:text-brand-accent transition-colors">Galamonth tech</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://api.whatsapp.com/send/?phone=5533999877866&text=Ol%C3%A1%2C+Dr.+Kr%C3%ADstopher.+Preciso+de+orienta%C3%A7%C3%A3o+jur%C3%ADdica&type=phone_number&app_absent=0&utm_source=ig" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl whatsapp-float transition-transform hover:scale-110" aria-label="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializar animações AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Fechar menu mobile ao clicar em um link
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar glass effect on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
